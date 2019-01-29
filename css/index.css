@@ -181,6 +181,9 @@ img {
   border-bottom: 2px dashed #C0C0C0;
   position: fixed;
 }
+.main-navigation.navShadow {
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.6);
+}
 .main-navigation .nav-container {
   height: 100%;
   display: flex;
