@@ -13,7 +13,7 @@ navLinks.forEach(element => {
 const header = document.getElementsByTagName('header')['0'];
 console.log(header);
 
-// –––– Scroll Stuff ––– //
+// –––– Scroll Shadow ––– //
 let scrollTicking = false;
 
 function scrollShadow() {
@@ -34,4 +34,12 @@ window.addEventListener('scroll', function(e) {
     });
     scrollTicking = true;
   }
+});
+
+// ——— Copy Copyright ––– //
+document.addEventListener('copy', e => {
+    console.dir(e);
+    e.clipboardData.setData('text/plain', 'Copyright Fun Bus 2018');
+    e.clipboardData.setData('text/html', '<b>Copyright Fun Bus 2018</b>');
+    e.preventDefault();
 });
