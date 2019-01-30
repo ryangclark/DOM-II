@@ -112,3 +112,23 @@
     }
   }
 }// home
+
+#internet {
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  &.hidden {
+    display: none;
+  }
+  #offline-notice {
+    background: gray;
+    padding: 40px;
+    font-size: 40px;
+  }
+}
