@@ -43,3 +43,19 @@ document.addEventListener('copy', e => {
     e.clipboardData.setData('text/html', '<b>Copyright Fun Bus 2018</b>');
     e.preventDefault();
 });
+
+// ––– Nav Hover ––– //
+navLinks.forEach(element => {
+    element.addEventListener('mouseover', event => {
+        element.style.textDecoration = 'underline';
+        event.stopPropagation;
+    })
+})
+// ––– Header Un-Hover ––– //
+document.querySelector('.container.home').addEventListener('mouseenter', e => {
+    navLinks.forEach(element => element.style.textDecoration = 'none')
+});
+
+// ––– Offline –– //
+internetDiv = document.getElementById('internet');
+window.addEventListener('offline', e => internetDiv.classList.remove('hidden'));
